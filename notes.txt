@@ -1,0 +1,15 @@
+base: data store, tools class, resource
+player: interactive class (character)
+runtime: environment, scene, bg
+
+When transfer html5 to wx mini game devtool, change those:
+1. Main.js > this.canvas = wx.createCanvas();
+2. ResourceLoader.js > const image = wx.createImage();
+3. window.innerWidth/Height > DataStore.getInstance().canvas.width/height, set canvas to DS in Main
+4. Main.js addEventListener > wx.onTouchStart (no need preventDefault)
+5. wx.createInnerAudioContext
+6. vx.vibrateShort
+7. wx.getUserInfo
+8. wx.request
+9. wx.connectSocket  wx.onSocketOpen wx.sendSocketMessage wx.onSocketMessage
+10. wx.downloadFile
